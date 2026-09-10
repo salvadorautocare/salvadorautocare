@@ -39,7 +39,7 @@
     .gallery-card img{display:block;width:100%;height:300px;object-fit:cover}
     .gallery-card figcaption{padding:14px 16px;color:#bdbdbd;font-weight:700}
     .gallery-card figcaption span{color:var(--red)}
-    .mobile{display:none}
+    .reviews{background:#0d0d0d}.review-summary{text-align:center;margin-bottom:28px}.stars{color:#ffbd00;font-size:1.5rem;letter-spacing:2px}.review-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.review{background:#111;border:1px solid #292929;border-radius:10px;padding:22px}.review h3{margin:0 0 6px}.review .meta{color:#999;font-size:.9rem;margin-bottom:10px}.review p{color:#ddd;margin:0}.review-actions{text-align:center;margin-top:28px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.mobile{display:none}
     @media(max-width:800px){.gallery{grid-template-columns:1fr}.gallery-card img{height:260px}.links{display:none}.mobile{display:block}.cards,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{min-height:590px;padding:55px 0}.brand span{display:none}}
   </style>
 </head>
@@ -118,6 +118,36 @@
           <img src="work-4.jpeg" alt="Air conditioning compressors">
           <figcaption><span>AC & Heating</span> — compressor replacement</figcaption>
         </figure>
+        <figure class="gallery-card">
+          <img src="work-5.jpeg" alt="Brake rotor and caliper service work">
+          <figcaption><span>Brake Service</span> — rotor and caliper work</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="work-6.jpeg" alt="Spark plugs showing replacement service">
+          <figcaption><span>Engine Service</span> — spark plug replacement</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="work-7.jpeg" alt="Suspension control arms and components">
+          <figcaption><span>Suspension</span> — control arm replacement</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-title"><h2>Google Reviews</h2><div class="redline"></div><p>See what customers are saying about Salvador Auto Care.</p></div>
+      <div class="review-summary"><div class="stars">★★★★★</div><strong style="font-size:2rem">5.0</strong> <span style="color:#aaa">from Google reviews</span></div>
+      <div class="review-grid">
+        <article class="review"><h3>Rich R</h3><div class="meta">★★★★★ · 3 weeks ago</div><p>“An amazing honest mechanic, knows exactly what he is doing especially with German /Euro cars, AMG Mercedes etc.. 💪👍🧰”</p></article>
+        <article class="review"><h3>Bianca Brown</h3><div class="meta">★★★★★ · 2 weeks ago · Local Guide</div><p>“Comes to you was able to diagnose my problem order parts and get it fixed within days. Very pleased with the service I received.”</p></article>
+        <article class="review"><h3>Dion Bivens</h3><div class="meta">★★★★★ · 3 weeks ago</div><p>“Quality work, communication 5 start, great business I have a new mechanic!”</p></article>
+        <article class="review"><h3>shawn elliott</h3><div class="meta">★★★★★ · 16 weeks ago</div><p>“Had a great experience Salvador was extremely patient and completed the job with professionalism. He explained what he was doing as he was working, I told him he is now my mechanic.”</p></article>
+        <article class="review"><h3>Ushekia McGhee</h3><div class="meta">★★★★★ · 16 weeks ago</div><p>“Christian was on time and quick. He diagnosed the problem, got the parts, and completed the job. My BMW is riding smoothly and I’m a happy customer!”</p></article>
+      </div>
+      <div class="review-actions">
+        <a class="btn" href="https://www.google.com/search?q=Salvador+Auto+Care+202-774-7624" target="_blank" rel="noopener">Leave a Google Review</a>
+        <a class="btn outline" href="https://www.google.com/search?q=Salvador+Auto+Care+202-774-7624" target="_blank" rel="noopener">See All Google Reviews</a>
       </div>
     </div>
   </section>
@@ -143,15 +173,15 @@
         </div>
         <div class="contact-box">
           <h3>Request Service</h3>
-          <form action="mailto:Salvadorautocare05@gmail.com" method="post" enctype="text/plain">
-            <input name="name" placeholder="Your name" required>
-            <input name="phone" placeholder="Phone number" required>
-            <input name="vehicle" placeholder="Vehicle (year / make / model)">
-            <textarea name="message" placeholder="How can we help?"></textarea>
-            <button class="btn" type="submit">Send Request</button>
+          <form onsubmit="sendText(event)">
+            <input id="request-name" placeholder="Your name" required>
+            <input id="request-phone" placeholder="Phone number" required>
+            <input id="request-vehicle" placeholder="Vehicle (year / make / model)">
+            <textarea id="request-message" placeholder="How can we help?"></textarea>
+            <button class="btn" type="submit">Send Request by Text</button>
           </form>
-          <small style="color:#777">Submitting this form opens your email app and sends the request to Salvadorautocare05@gmail.com. You can also text us directly.</small>
-          <p style="margin-top:14px"><a class="btn outline" href="sms:2027747624">Text Us Directly</a></p>
+          <small style="color:#777">Your request will open a text message addressed to 202-774-7624. Your email is also available below.</small>
+          <p style="margin-top:14px"><a class="btn outline" href="mailto:Salvadorautocare05@gmail.com">Email Us</a></p>
         </div>
       </div>
     </div>
@@ -161,5 +191,8 @@
 <footer>
   <div class="container">© 2026 Salvador Auto Care. All rights reserved.</div>
 </footer>
+<script>
+function sendText(e){e.preventDefault();const n=document.getElementById('request-name').value;const p=document.getElementById('request-phone').value;const v=document.getElementById('request-vehicle').value;const m=document.getElementById('request-message').value;const body=`Service request from ${n}. Phone: ${p}. Vehicle: ${v || 'Not provided'}. Problem: ${m || 'Not provided'}`;window.location.href='sms:2027747624?&body='+encodeURIComponent(body);}
+</script>
 </body>
 </html>
