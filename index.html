@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Salvador Auto Care — professional automotive service and repair.">
+  <title>Salvador Auto Care | Auto Repair & Maintenance</title>
+  <link rel="icon" href="logo.png">
+  <style>
+    :root{--red:#e21b16;--red2:#ff3028;--black:#070707;--dark:#111;--gray:#b8b8b8;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--black);color:var(--white);line-height:1.6}
+    a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(7,7,7,.94);border-bottom:1px solid #292929;backdrop-filter:blur(8px)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;font-weight:900;letter-spacing:1px}.brand img{width:52px;height:52px;object-fit:contain;margin-right:10px}
+    .links{display:flex;gap:25px;font-weight:700;font-size:.95rem}.links a:hover{color:var(--red2)}
+    .btn{display:inline-block;padding:13px 21px;border-radius:6px;background:var(--red);font-weight:900;border:1px solid var(--red);transition:.2s}
+    .btn:hover{background:var(--red2);transform:translateY(-1px)}.btn.outline{background:transparent;border-color:#777}
+    .hero{min-height:650px;display:grid;place-items:center;text-align:center;padding:80px 0;background:
+      radial-gradient(circle at 50% 30%,rgba(226,27,22,.16),transparent 38%),
+      linear-gradient(180deg,#050505 0%,#0c0c0c 100%)}
+    .hero img{width:min(420px,72vw);filter:drop-shadow(0 15px 35px rgba(0,0,0,.7))}
+    .hero h1{font-size:clamp(2.4rem,7vw,5rem);line-height:1;margin:25px 0 14px;text-transform:uppercase;letter-spacing:2px}
+    .hero h1 span{color:var(--red)}.hero p{max-width:680px;margin:0 auto 28px;color:#d2d2d2;font-size:1.15rem}
+    .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    section{padding:85px 0}.section-title{text-align:center;margin-bottom:42px}.section-title h2{font-size:2.2rem;margin:0 0 8px;text-transform:uppercase}.section-title p{color:var(--gray);margin:0}
+    .redline{width:70px;height:4px;background:var(--red);margin:15px auto}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:linear-gradient(145deg,#171717,#0e0e0e);border:1px solid #2a2a2a;border-radius:10px;padding:28px}.card h3{margin:0 0 10px;color:#fff}.card p{color:#aaa;margin:0}.icon{font-size:2rem;margin-bottom:8px}
+    .about{background:#0d0d0d}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.about h2{font-size:2.3rem;margin-top:0}.about p{color:#bdbdbd}
+    .check{margin:12px 0;color:#ddd}.check b{color:var(--red);margin-right:8px}
+    .cta{background:linear-gradient(120deg,#170707,#0b0b0b);border-top:1px solid #2c1111;border-bottom:1px solid #2c1111;text-align:center}.cta h2{font-size:2.5rem;margin:0 0 10px}.cta p{color:#bbb}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-box{background:#111;border:1px solid #292929;border-radius:10px;padding:28px}.contact-box h3{margin-top:0}.placeholder{color:#ff8b87}
+    form{display:grid;gap:12px}input,textarea{width:100%;background:#080808;border:1px solid #3a3a3a;color:white;border-radius:6px;padding:13px;font:inherit}textarea{min-height:120px;resize:vertical}
+    footer{padding:35px 0;background:#050505;border-top:1px solid #222;color:#888;text-align:center;font-size:.9rem}
+
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .gallery-card{background:#111;border:1px solid #292929;border-radius:10px;overflow:hidden}
+    .gallery-card img{display:block;width:100%;height:300px;object-fit:cover}
+    .gallery-card figcaption{padding:14px 16px;color:#bdbdbd;font-weight:700}
+    .gallery-card figcaption span{color:var(--red)}
+    .mobile{display:none}
+    @media(max-width:800px){.gallery{grid-template-columns:1fr}.gallery-card img{height:260px}.links{display:none}.mobile{display:block}.cards,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{min-height:590px;padding:55px 0}.brand span{display:none}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#top"><img src="logo.png" alt="Salvador Auto Care logo"><span>SALVADOR AUTO CARE</span></a>
+      <div class="links"><a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+      <a class="btn mobile" href="#contact">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container">
+      <img src="logo.png" alt="Salvador Auto Care">
+      <h1>Auto care you can <span>trust.</span></h1>
+      <p>Professional automotive service, maintenance, and repair — with quality workmanship and straightforward service.</p>
+      <div class="actions">
+        <a class="btn" href="tel:2027747624">Call / Text 202-774-7624</a>
+        <a class="btn outline" href="#services">View Services</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-title"><h2>Our Services</h2><div class="redline"></div><p>Tell us what your vehicle needs and we'll help get you back on the road.</p></div>
+      <div class="cards"><div class="card"><div class="icon">🛢️</div><h3>Oil Changes</h3><p>Routine oil and filter service to help keep your engine running smoothly.</p></div>
+<div class="card"><div class="icon">🔧</div><h3>Brake Service</h3><p>Brake inspection, repair, and maintenance for safe, confident stopping.</p></div>
+<div class="card"><div class="icon">🔍</div><h3>Diagnostics</h3><p>Vehicle diagnostics to identify warning lights, drivability issues, and mechanical problems.</p></div>
+<div class="card"><div class="icon">⚙️</div><h3>Engine & Transmission</h3><p>Engine and transmission diagnosis, repair, and maintenance.</p></div>
+<div class="card"><div class="icon">❄️</div><h3>AC & Heating</h3><p>Heating and air-conditioning diagnosis, repair, and service.</p></div>
+<div class="card"><div class="icon">⚡</div><h3>Electrical</h3><p>Electrical system diagnosis and repair for starting, charging, lighting, and other issues.</p></div>
+<div class="card"><div class="icon">🛞</div><h3>Suspension</h3><p>Inspection and repair of suspension components for handling, comfort, and safety.</p></div>
+<div class="card"><div class="icon">🧰</div><h3>Other Services</h3><p>Ask us about additional automotive repair and maintenance needs.</p></div></div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div>
+        <div class="section-title" style="text-align:left;margin-bottom:20px"><h2>Why Salvador Auto Care?</h2><div class="redline" style="margin-left:0"></div></div>
+        <p>We believe auto service should be professional, honest, and easy to understand. Our goal is to provide dependable work and help customers make confident decisions about their vehicles.</p>
+        <div class="check"><b>✓</b> Quality-focused service</div>
+        <div class="check"><b>✓</b> Straightforward communication</div>
+        <div class="check"><b>✓</b> Customer-first approach</div>
+      </div>
+      <div style="text-align:center"><img src="logo.png" alt="" style="width:min(390px,85%);opacity:.95"></div>
+    </div>
+  </section>
+
+
+  <section id="work">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Work</h2><div class="redline"></div>
+        <p>Real repair work completed by Salvador Auto Care.</p>
+      </div>
+      <div class="gallery">
+        <figure class="gallery-card">
+          <img src="work-1.jpeg" alt="Brake rotor and brake pads service work">
+          <figcaption><span>Brake Service</span> — rotor and pad work</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="work-2.jpeg" alt="Suspension link components">
+          <figcaption><span>Suspension</span> — component replacement</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="work-3.jpeg" alt="CV axles and drivetrain components">
+          <figcaption><span>Engine & Drivetrain</span> — axle service</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="work-4.jpeg" alt="Air conditioning compressors">
+          <figcaption><span>AC & Heating</span> — compressor replacement</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Need your car serviced?</h2>
+      <p>Contact Salvador Auto Care to discuss your vehicle and request an appointment.</p>
+      <a class="btn" href="#contact">Get Started</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-title"><h2>Contact Us</h2><div class="redline"></div><p>Replace the placeholder details below with your real business information.</p></div>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3>Salvador Auto Care</h3>
+          <p><strong>Call / Text:</strong> <a href="tel:2027747624" style="color:#fff;text-decoration:underline">202-774-7624</a></p>
+          <p><strong>Address:</strong> <span class="placeholder">YOUR SHOP ADDRESS</span></p>
+          <p><strong>Hours:</strong> Monday – Saturday, 9:00 AM – 6:00 PM</p>
+          <p style="color:#999">For appointments, call or send a message using the form.</p>
+        </div>
+        <div class="contact-box">
+          <h3>Request Service</h3>
+          <form action="mailto:YOUR-EMAIL@example.com" method="post" enctype="text/plain">
+            <input name="name" placeholder="Your name" required>
+            <input name="phone" placeholder="Phone number" required>
+            <input name="vehicle" placeholder="Vehicle (year / make / model)">
+            <textarea name="message" placeholder="How can we help?"></textarea>
+            <button class="btn" type="submit">Send Request</button>
+          </form>
+          <small style="color:#777">Note: the form uses your device's email app. Replace the email address before publishing.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2026 Salvador Auto Care. All rights reserved.</div>
+</footer>
+</body>
+</html>
